@@ -4,6 +4,6 @@ if defined?(Pry)
   end
 
   Pry.hooks.add_hook(:after_session, "log_after_session") do |_output, _binding, _pry|
-    ConsoleDetective::Utils.log_command("exit")
+    ConsoleDetective::Utils.log_command("exit", immediately: true)
   end
 end

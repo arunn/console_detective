@@ -44,13 +44,21 @@ RSpec.describe ConsoleDetective::Utils do
     expect(ConsoleDetective::Utils.get_tag).to eq "nothing"
   end
 
-  it "calls logger with tag and command in a thread" do
+  it "calls logger with tag and command in a thread if immediately is false" do
     logger = ConsoleDetective::Utils.logger
     expect(logger).to receive(:info).with({tag: ENV['USER'], command: 'command_test'})
     thr = ConsoleDetective::Utils.log_command("command_test")
+    expect(thr).to be_a(Thread)
     thr.join
     while(thr.alive?)
       sleep(0.1)
     end
+  end
+
+  it "calls logger with tag and command if immediately is true" do
+    logger = ConsoleDetective::Utils.logger
+    expect(logger).to receive(:info).with({tag: ENV['USER'], command: 'command_test'})
+    thr = ConsoleDetective::Utils.log_command("command_test", immediately: true)
+    expect(thr).not_to be_a(Thread)
   end
 end

@@ -17,7 +17,7 @@ RSpec.describe "ConsoleDetective::Pry" do
   end
 
   it "calls log command when after_session is called" do
-    expect(ConsoleDetective::Utils).to receive(:log_command).with("exit")
+    expect(ConsoleDetective::Utils).to receive(:log_command).with("exit", immediately: true)
     repl.send_input("exit-all")
   end
 end
