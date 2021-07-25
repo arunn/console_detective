@@ -8,3 +8,6 @@ gem "rspec", "~> 3.0"
 
 gem 'byebug'
 gem 'pry'
+
+gem 'simplecov', require: false
+gem 'simplecov-lcov', require: false
