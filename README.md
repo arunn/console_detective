@@ -2,7 +2,7 @@
 
 A gem to track commands typed in rails console along with tagging in realtime. The tags can be used to identify users. The values for log tags, log format, log file name, and memoization requirements are configurable.
 
-Compatible with both pry[https://github.com/pry/pry] and IRB[https://github.com/ruby/ruby/tree/master/lib/irb]. Pry and IRB both provide history options. But unfortunately, it is not possible to get it realtime, there are no tagging options available, and there is no way to know the time when the command was fired. Another disadvantage is that if you're connecting to console using ssh, the logs will be lost if the connection is disconnected. This gem is useful in such situations.
+Compatible with both [pry](https://github.com/pry/pry) and [IRB](https://github.com/ruby/ruby/tree/master/lib/irb). Pry and IRB both provide history options. But unfortunately, it is not possible to get it realtime, there are no tagging options available, and there is no way to know the time when the command was fired. Another disadvantage is that if you're connecting to console using ssh, the logs will be lost if the connection is disconnected. This gem is useful in such situations.
 ## Installation
 
 Add this line to your application's Gemfile:
