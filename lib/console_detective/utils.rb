@@ -12,7 +12,7 @@ module ConsoleDetective
     end
 
     def self.log_command(command)
-      Thread.new { ConsoleDetective::Utils.logger.info(ConsoleDetective.log_format.call(command)) }
+      Thread.new { ConsoleDetective::Utils.logger.info(ConsoleDetective.log_format.call(ConsoleDetective::Utils.get_tag, command)) }
     end
   end
 end

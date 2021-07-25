@@ -16,9 +16,9 @@ module ConsoleDetective
   # default value is the ENV['USER']
   mod_attr_accessor :log_tags, -> { ENV['USER'] }
 
-  # log_format is a lambda outputting the format in which the log will be entered in the log file
+  # log_format is a lambda which takes tag and command as input and outputs the format in which the log will be entered in the log file
   # default format is a hash of format { :tag => <tag>, :command => <command> }
-  mod_attr_accessor :log_format, -> (command) { { tag: ConsoleDetective::Utils.get_tag, command: command } }
+  mod_attr_accessor :log_format, -> (tag, command) { { tag: tag, command: command } }
   
   # tag_memoization is a boolean to mention if the tag should be memoized or not.
   # default is true
