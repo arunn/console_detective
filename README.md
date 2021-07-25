@@ -1,31 +1,33 @@
-# ConsoleDetective
+# ConsoleDetective [![Codacy Badge](https://app.codacy.com/project/badge/Grade/7fabacab5ff445248655e1b9b35f1aef)](https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=arunn/console_detective&amp;utm_campaign=Badge_Grade)[![Codacy Badge](https://app.codacy.com/project/badge/Coverage/7fabacab5ff445248655e1b9b35f1aef)](https://www.codacy.com?utm_source=github.com&utm_medium=referral&utm_content=arunn/console_detective&utm_campaign=Badge_Coverage)[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/arunn/console_detective/graphs/commit-activity)
 
 A gem to track commands typed in rails console along with tagging in realtime. The tags can be used to identify users. This works with plain [pry](https://github.com/pry/pry) and [IRB](https://github.com/ruby/ruby/tree/master/lib/irb) and rails console using pry or IRB. The values for log tags, log format, log file name, and memoization requirements are configurable. 
 
 Pry and IRB both provide options for recordng history. It has a few disadvantages:
 
-1. It is not possible to get the logs in realtime.
-2. There are no tagging options available.
-3. There is no way to know the time when the command was fired. 
-4. If we're connecting to console using ssh, the logs will be lost if the connection is disconnected since the logs are only written only when we exit the session. 
+1.	It is not possible to get the logs in realtime.
+2.	There are no tagging options available.
+3.	There is no way to know the time when the command was fired. 
+4.	If we're connecting to console using ssh, the logs will be lost if the connection is disconnected since the logs are only written only when we exit the session. 
 
 `console_detective` overcomes such disadvantages.
 ## Installation
 
 Add this line to your application's Gemfile:
 
-```ruby
+~~~~~ruby
 gem 'console_detective'
-```
+~~~~~
 
 And then execute:
 
-    $ bundle install
+~~~~~sh
+$ bundle install
+~~~~~
 
 Or install it yourself as:
-
-    $ gem install console_detective
-
+~~~~~sh
+$ gem install console_detective
+~~~~~
 ## Usage
 
 There are meaningful defaults for the config. If you are using rails, run `rails console`. Otherwise, `irb -rconsole_detective` or `pry -I./lib -r console_detective` will load the respective consoles with `console_detective` loaded.
@@ -65,4 +67,3 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/arunn/console_detective.
-
