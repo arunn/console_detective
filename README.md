@@ -1,13 +1,13 @@
-# ConsoleDetective [![Codacy Badge](https://app.codacy.com/project/badge/Grade/7fabacab5ff445248655e1b9b35f1aef)](https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=arunn/console_detective&amp;utm_campaign=Badge_Grade)[![Codacy Badge](https://app.codacy.com/project/badge/Coverage/7fabacab5ff445248655e1b9b35f1aef)](https://www.codacy.com?utm_source=github.com&utm_medium=referral&utm_content=arunn/console_detective&utm_campaign=Badge_Coverage)[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/arunn/console_detective/graphs/commit-activity)
+# ConsoleDetective ![Console Detective](https://github.com/arunn/console_detective/actions/workflows/ci.yml/badge.svg)[![Codacy Badge](https://app.codacy.com/project/badge/Grade/7fabacab5ff445248655e1b9b35f1aef)](https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=arunn/console_detective&amp;utm_campaign=Badge_Grade)[![Codacy Badge](https://app.codacy.com/project/badge/Coverage/7fabacab5ff445248655e1b9b35f1aef)](https://www.codacy.com?utm_source=github.com&utm_medium=referral&utm_content=arunn/console_detective&utm_campaign=Badge_Coverage)[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/arunn/console_detective/graphs/commit-activity)
 
 A gem to track commands typed in rails console along with tagging in realtime. The tags can be used to identify users. This works with plain [pry](https://github.com/pry/pry) and [IRB](https://github.com/ruby/ruby/tree/master/lib/irb) and rails console using pry or IRB. The values for log tags, log format, log file name, and memoization requirements are configurable. 
 
 Pry and IRB both provide options for recordng history. It has a few disadvantages:
 
-1.	It is not possible to get the logs in realtime.
-2.	There are no tagging options available.
-3.	There is no way to know the time when the command was fired. 
-4.	If we're connecting to console using ssh, the logs will be lost if the connection is disconnected since the logs are only written only when we exit the session. 
+1. It is not possible to get the logs in realtime.
+2. There are no tagging options available.
+3. There is no way to know the time when the command was fired. 
+4. If we're connecting to console using ssh, the logs will be lost if the connection is disconnected since the logs are only written only when we exit the session. 
 
 `console_detective` overcomes such disadvantages.
 ## Installation
@@ -34,7 +34,7 @@ There are meaningful defaults for the config. If you are using rails, run `rails
 
 The configs can be overridden by creating a file named `console_detective.rb` with following code.
 
-```ruby
+~~~ruby
 require 'console_detective'
 
 ConsoleDetective.setup do |config|
@@ -54,7 +54,7 @@ ConsoleDetective.setup do |config|
   # default is true
   config.tag_memoization    = true
 end
-```
+~~~
 
 If you are using rails, place this file in `config/initializers` folder and run `rails console`. Otherwise, `irb -r ./console_detective.rb` or `pry -r ./console_detective.rb` will load the respective consoles with `console_detective` loaded with modified config.
 
