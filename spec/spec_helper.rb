@@ -1,3 +1,4 @@
+require 'console_detective_coverage'
 require "bundler/setup"
 require 'irb'
 require "dummy_console/pry"
