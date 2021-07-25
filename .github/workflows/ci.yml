@@ -24,3 +24,7 @@ jobs:
     - run: mkdir -p log/ tmp/ coverage/
     - name: Run tests
       run: bundle exec rake
+    - name: Upload Code Coverage
+      env: # Or as an environment variable
+        CODACY_PROJECT_TOKEN: ${{ secrets.CODACY_PROJECT_TOKEN }}
+      run: bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r coverage/lcov.info
