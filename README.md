@@ -2,12 +2,12 @@
 
 A gem to track commands typed in rails console along with tagging in realtime. The tags can be used to identify users. This works with plain [pry](https://github.com/pry/pry) and [IRB](https://github.com/ruby/ruby/tree/master/lib/irb) and rails console using pry or IRB. The values for log tags, log format, log file name, and memoization requirements are configurable. 
 
-Pry and IRB both provide options for recordng history. It has a few disadvantages:
+Pry and IRB both provide options for recording history. It has a few disadvantages:
 
 1. It is not possible to get the logs in realtime.
 2. There are no tagging options available.
 3. There is no way to know the time when the command was fired. 
-4. If we're connecting to console using ssh, the logs will be lost if the connection is disconnected since the logs are only written only when we exit the session. 
+4. If we're connecting to the console using ssh, the logs will be lost if the connection is disconnected since the logs are only written only when we exit the session. 
 
 `console_detective` overcomes such disadvantages.
 ## Installation
