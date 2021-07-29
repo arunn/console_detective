@@ -30,7 +30,8 @@ $ gem install console_detective
 ~~~~~
 ## Usage
 
-There are meaningful defaults for the config. If you are using rails, run `rails console`. Otherwise, `irb -rconsole_detective` or `pry -I./lib -r console_detective` will load the respective consoles with `console_detective` loaded.
+There are meaningful defaults for the config. If you are using rails, run `rails console`. Otherwise, `irb -rconsole_detective` or `pry -I./lib -r console_detective` will load the respective consoles with `console_detective` loaded. You can also modify `~/.irbrc` or `~/.pryrc` with `require console_detective` to load the `console_detective` by default.
+
 
 The configs can be overridden by creating a file named `console_detective.rb` with following code.
 
@@ -56,7 +57,7 @@ ConsoleDetective.setup do |config|
 end
 ~~~
 
-If you are using rails, place this file in `config/initializers` folder and run `rails console`. Otherwise, `irb -r ./console_detective.rb` or `pry -r ./console_detective.rb` will load the respective consoles with `console_detective` loaded with modified config.
+If you are using rails, place this file in `config/initializers` folder and run `rails console`. Otherwise, `irb -r ./console_detective.rb` or `pry -r ./console_detective.rb` will load the respective consoles with `console_detective` loaded with modified config. You can also modify `~/.irbrc` or `~/.pryrc` with `require console_detective.rb` to load the modified config by default.
 
 ## Development
 
