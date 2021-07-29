@@ -1,8 +1,8 @@
 module ConsoleDetective
   module IrbLogger
-    def evaluate(*args)
+    def evaluate(*args, **kw)
       ConsoleDetective::Utils.log_command(args.first.chomp)
-      super(*args)
+      super(*args, **kw)
     end
   end
 end
