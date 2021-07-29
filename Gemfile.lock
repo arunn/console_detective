@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    console_detective (0.1.1)
+    console_detective (0.1.2)
 
 GEM
   remote: https://rubygems.org/
@@ -49,4 +49,4 @@ DEPENDENCIES
   simplecov-lcov
 
 BUNDLED WITH
-   2.1.4
+   2.2.22

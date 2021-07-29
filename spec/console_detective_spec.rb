@@ -10,7 +10,7 @@ RSpec.describe ConsoleDetective do
   end
 
   it "has a fixed version number" do
-    expect(ConsoleDetective::VERSION).to eq "0.1.1"
+    expect(ConsoleDetective::VERSION).to eq "0.1.2"
   end
 
   it "has meaningul defaults set" do
