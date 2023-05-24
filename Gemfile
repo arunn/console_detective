@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-# Specify your gem's dependencies in console_detective.gemspec
+# Specify your gem's dependencies in pier_console_detective.gemspec
 gemspec
 
 gem "rake", "~> 12.0"

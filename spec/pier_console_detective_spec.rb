@@ -2,7 +2,7 @@ require "spec_helper"
 
 RSpec.describe ConsoleDetective do
   before(:each) do
-    reset_console_detective_to_defaults
+    reset_pier_console_detective_to_defaults
   end
 
   it "has a version number" do

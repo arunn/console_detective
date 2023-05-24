@@ -5,7 +5,7 @@ RSpec.describe ConsoleDetective::Utils do
     [:@logger, :@tag].each do |variable|
       ConsoleDetective::Utils.remove_instance_variable(variable) if ConsoleDetective::Utils.instance_variables.include?(variable)
     end
-    reset_console_detective_to_defaults
+    reset_pier_console_detective_to_defaults
   end
 
   it "sets up logger object with default filename" do

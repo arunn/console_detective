@@ -1,9 +1,9 @@
-require 'console_detective_coverage'
+require 'pier_console_detective_coverage'
 require "bundler/setup"
 require 'irb'
 require "dummy_console/pry"
 require 'byebug'
-require "console_detective"
+require "pier_console_detective"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
@@ -17,7 +17,7 @@ RSpec.configure do |config|
   end
 end
 
-def reset_console_detective_to_defaults
+def reset_pier_console_detective_to_defaults
   ConsoleDetective.setup do |config|
     config.log_file_name    = "log/console.log"
     config.log_tags         = -> { ENV['USER'] }

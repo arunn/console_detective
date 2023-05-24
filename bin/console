@@ -9,12 +9,12 @@ require 'byebug'
 
 if(ENV['PRY'] == 'true')
   require "pry"
-  require "console_detective" # Loading after loading irb/pry since we want those to be present when loading console_detective
+  require "pier_console_detective" # Loading after loading irb/pry since we want those to be present when loading pier_console_detective
 
   Pry.start
 else
   require "irb"
-  require "console_detective" # Loading after loading irb/pry since we want those to be present when loading console_detective
+  require "pier_console_detective" # Loading after loading irb/pry since we want those to be present when loading pier_console_detective
 
   IRB.start(__FILE__)
 end

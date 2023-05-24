@@ -1,5 +1,5 @@
-require "console_detective/version"
-require "console_detective/mod_attr_accessor"
+require "pier_console_detective/version"
+require "pier_console_detective/mod_attr_accessor"
 
 module ConsoleDetective
   extend ConsoleDetective::ModAttrAccessor
@@ -25,6 +25,6 @@ module ConsoleDetective
   mod_attr_accessor :tag_memoization, true
 end
 
-require 'console_detective/utils'
-require 'console_detective/irb'
-require 'console_detective/pry'
+require 'pier_console_detective/utils'
+require 'pier_console_detective/irb'
+require 'pier_console_detective/pry'
